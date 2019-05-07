@@ -1,0 +1,15 @@
+{
+    "plugins": ["@babel/plugin-proposal-class-properties"],
+    "presets": [
+      ["@babel/preset-env", {
+        "modules": "commonjs"
+      }],
+      ["@babel/preset-react", {
+        "absoluteRuntime": false
+      }]
+    ],
+    "ignore": [
+      "**/*.spec.js"
+    ]
+}
+  

@@ -1,0 +1,39 @@
+{
+  "name": "react-scroll-shadow",
+  "version": "0.1.0",
+  "description": "React Scroll Shadow",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production babel src --out-dir dist --ignore *.spec.js --copy-files",
+    "test": "yarn test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrelmlins/react-scroll-shadow.git"
+  },
+  "keywords": [
+    "react",
+    "scroll",
+    "shadow"
+  ],
+  "author": "André Lins",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andrelmlins/react-scroll-shadow/issues"
+  },
+  "homepage": "https://github.com/andrelmlins/react-scroll-shadow#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.4",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.4",
+    "@babel/preset-react": "^7.0.0",
+    "cross-env": "^5.2.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "styled-components": "^4.2.0"
+  },
+  "dependencies": {
+    "react-resize-detector": "^4.1.3"
+  }
+}
