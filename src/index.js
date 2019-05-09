@@ -1,6 +1,5 @@
 import React from 'react';
-import { colors } from '@bayon/commons';
-import { withStyles } from '@material-ui/core/styles';
+import withStyles from 'react-jss';
 import ReactResizeDetector from 'react-resize-detector';
 
 import Container from './components/Container';
@@ -45,15 +44,17 @@ const styles = {
   subcontainer: {
     overflowY: 'auto',
     height: '100%',
-    '&::-webkit-scrollbar': { width: 4, background: colors.neutralLight },
-    '&::-webkit-scrollbar-track': { background: colors.neutralLight },
+    '&::-webkit-scrollbar': { width: 4, background: '#F4F4F4' },
+    '&::-webkit-scrollbar-track': { background: '#F4F4F4' },
     '&::-webkit-scrollbar-thumb': {
-      background: colors.defaultDark,
+      background: '#C5C5C5',
       borderRadius: 5,
       overflow: 'hidden',
-      '&:hover': { background: colors.neutralTertiary }
+      '&:hover': { background: '#A6A6A6' }
     }
   }
 };
+
+ScrollShadowComponent.propTypes = {};
 
 export default withStyles(styles)(ScrollShadowComponent);

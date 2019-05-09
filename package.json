@@ -2,7 +2,7 @@
   "name": "react-scroll-shadow",
   "version": "0.1.0",
   "description": "React Scroll Shadow",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir dist --ignore *.spec.js --copy-files",
     "test": "yarn test"
@@ -34,6 +34,7 @@
     "styled-components": "^4.2.0"
   },
   "dependencies": {
+    "react-jss": "^8.6.1",
     "react-resize-detector": "^4.1.3"
   }
 }

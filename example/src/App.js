@@ -1,7 +1,8 @@
 import React from 'react';
+import ReactScrollShadow from 'react-scroll-shadow';
 
 function App() {
-  return <div>Scroll</div>;
+  return <ReactScrollShadow>Scroll</ReactScrollShadow>;
 }
 
 export default App;
