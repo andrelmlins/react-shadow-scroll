@@ -1,8 +1,9 @@
 import React from 'react';
-import withStyles from 'react-jss';
+import PropTypes from 'prop-types';
 import ReactResizeDetector from 'react-resize-detector';
 
 import Container from './components/Container';
+import SubContainer from './components/SubContainer';
 
 export class ScrollShadowComponent extends React.Component {
   constructor(props) {
@@ -24,37 +25,31 @@ export class ScrollShadowComponent extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { scrollColor, scrollColorHover } = this.props;
 
     return (
-      //<div className={this.state.scroll ? classes.container : ''}>
-      <Container>
-        <div ref={this.ref} className={classes.subcontainer}>
+      <Container scroll={this.state.scroll}>
+        <SubContainer
+          ref={this.ref}
+          scrollColor={scrollColor}
+          scrollColorHover={scrollColorHover}
+        >
           {this.props.children}
           <ReactResizeDetector handleHeight onResize={this.resizeTags} />
-        </div>
+        </SubContainer>
       </Container>
-      //</div>
     );
   }
 }
 
-const styles = {
-  container: {},
-  subcontainer: {
-    overflowY: 'auto',
-    height: '100%',
-    '&::-webkit-scrollbar': { width: 4, background: '#F4F4F4' },
-    '&::-webkit-scrollbar-track': { background: '#F4F4F4' },
-    '&::-webkit-scrollbar-thumb': {
-      background: '#C5C5C5',
-      borderRadius: 5,
-      overflow: 'hidden',
-      '&:hover': { background: '#A6A6A6' }
-    }
-  }
+ScrollShadowComponent.propTypes = {
+  scrollColor: PropTypes.string,
+  scrollColorHover: PropTypes.string
 };
 
-ScrollShadowComponent.propTypes = {};
+ScrollShadowComponent.defaultProps = {
+  scrollColor: '#c5c5c5',
+  scrollColorHover: '#a6a6a6'
+};
 
-export default withStyles(styles)(ScrollShadowComponent);
+export default ScrollShadowComponent;

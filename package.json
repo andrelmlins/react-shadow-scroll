@@ -34,7 +34,6 @@
     "styled-components": "^4.2.0"
   },
   "dependencies": {
-    "react-jss": "^8.6.1",
     "react-resize-detector": "^4.1.3"
   }
 }
