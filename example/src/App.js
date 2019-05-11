@@ -7,7 +7,7 @@ const App = () => {
   return (
     <Container>
       <Card>
-        <ReactScrollShadow>
+        <ReactScrollShadow scrollWidth={10} scrollPadding={5}>
           <Ul>
             <Li>Test</Li>
             <Li>Test</Li>
@@ -23,7 +23,21 @@ const App = () => {
           </Ul>
         </ReactScrollShadow>
       </Card>
-      <Card>Scroll</Card>
+      <Card style={{ overflowY: 'scroll' }}>
+        <Ul>
+          <Li>Test</Li>
+          <Li>Test</Li>
+          <Li>Test</Li>
+          <Li>Test</Li>
+          <Li>Test</Li>
+          <Li>Test</Li>
+          <Li>Test</Li>
+          <Li>Test</Li>
+          <Li>Test</Li>
+          <Li>Test</Li>
+          <Li>Test</Li>
+        </Ul>
+      </Card>
     </Container>
   );
 };

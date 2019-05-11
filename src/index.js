@@ -15,8 +15,6 @@ export class ScrollShadowComponent extends React.Component {
   }
 
   resizeTags = () => {
-    console.log(this.ref.current.clientHeight);
-    console.log(this.ref.current.scrollHeight);
     if (this.ref.current.clientHeight < this.ref.current.scrollHeight) {
       this.setState({ scroll: true });
     } else {
