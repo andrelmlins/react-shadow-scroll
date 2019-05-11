@@ -40,3 +40,14 @@ class App extends PureComponent {
 
 render(<App />, document.getElementById('root'));
 ```
+
+## Properties
+
+Raw component props (before transform):
+
+| Prop  | Default  | Type  | Description  |
+|---|---|---|---|
+| scrollColor | #c5c5c5 | string | Scroll color |
+| scrollColorHover | #a6a6a6 | string | Scroll color when hover |
+| scrollWidth | 5 | number | Scroll Width |
+| scrollPadding | 0 | number | Left scroll padding |
