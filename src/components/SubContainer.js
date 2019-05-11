@@ -1,9 +1,6 @@
 import styled from 'styled-components';
 
-const SubContainer = styled.div.attrs(({ scrollColor, scrollColorHover }) => ({
-  scrollColor,
-  scrollColorHover
-}))`
+const SubContainer = styled.div`
   overflow-y: auto;
   height: 100%;
   &::-webkit-scrollbar {

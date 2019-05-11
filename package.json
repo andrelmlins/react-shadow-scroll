@@ -30,10 +30,11 @@
     "@babel/preset-react": "^7.0.0",
     "cross-env": "^5.2.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "^4.2.0"
+    "react-dom": "^16.8.6"
   },
   "dependencies": {
+    "babel-plugin-styled-components": "^1.10.0",
+    "react-jss": "^8.6.1",
     "react-resize-detector": "^4.1.3"
   }
 }

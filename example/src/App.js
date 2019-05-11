@@ -1,13 +1,30 @@
 import React from 'react';
 import ReactScrollShadow from 'react-scroll-shadow';
 
-import { Body, Ul, Li, Card } from './styleds';
+import { Container, Ul, Li, Card } from './styleds';
 
 const App = () => {
   return (
-    <Body>
-      <ReactScrollShadow>Scroll</ReactScrollShadow>
-    </Body>
+    <Container>
+      <Card>
+        <ReactScrollShadow>
+          <Ul>
+            <Li>Test</Li>
+            <Li>Test</Li>
+            <Li>Test</Li>
+            <Li>Test</Li>
+            <Li>Test</Li>
+            <Li>Test</Li>
+            <Li>Test</Li>
+            <Li>Test</Li>
+            <Li>Test</Li>
+            <Li>Test</Li>
+            <Li>Test</Li>
+          </Ul>
+        </ReactScrollShadow>
+      </Card>
+      <Card>Scroll</Card>
+    </Container>
   );
 };
 
