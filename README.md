@@ -4,9 +4,9 @@
 ## Installation
 
 ```
-npm i react-scroll-shadow
+npm i react-shadow-scroll
 // OR
-yarn add react-scroll-shadow
+yarn add react-shadow-scroll
 ```
 
 ## Demo
@@ -14,8 +14,8 @@ yarn add react-scroll-shadow
 Local demo:
 
 ```
-git clone https://github.com/andrelmlins/react-scroll-shadow.git
-cd react-scroll-shadow/examples
+git clone https://github.com/andrelmlins/react-shadow-scroll.git
+cd react-shadow-scroll/example
 yarn install && yarn start
 ```
 
@@ -24,15 +24,15 @@ yarn install && yarn start
 ```jsx
 import React, { PureComponent } from 'react';
 import { render } from 'react-dom';
-import ReactScrollShadow from 'react-scroll-shadow';
+import ReactShadowScroll from 'react-shadow-scroll';
 
 class App extends PureComponent {
   render() {
     return (
       <div>
-        <ReactScrollShadow>
+        <ReactShadowScroll>
             Scroll
-        </ReactScrollShadow>
+        </ReactShadowScroll>
       </div>
     );
   }

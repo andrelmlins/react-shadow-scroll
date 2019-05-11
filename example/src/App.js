@@ -1,13 +1,31 @@
 import React from 'react';
-import ReactScrollShadow from 'react-scroll-shadow';
+import ReactShadowScroll from 'react-shadow-Scroll';
 
-import { Container, Ul, Li, Card } from './styleds';
+import { Container, Ul, Li, Card, Title, Row } from './styleds';
 
 const App = () => {
   return (
     <Container>
-      <Card>
-        <ReactScrollShadow scrollWidth={10} scrollPadding={5}>
+      <Title>React Shadow Scroll</Title>
+      <Row>
+        <Card>
+          <ReactShadowScroll scrollWidth={10} scrollPadding={5}>
+            <Ul>
+              <Li>Test</Li>
+              <Li>Test</Li>
+              <Li>Test</Li>
+              <Li>Test</Li>
+              <Li>Test</Li>
+              <Li>Test</Li>
+              <Li>Test</Li>
+              <Li>Test</Li>
+              <Li>Test</Li>
+              <Li>Test</Li>
+              <Li>Test</Li>
+            </Ul>
+          </ReactShadowScroll>
+        </Card>
+        <Card style={{ overflowY: 'scroll' }}>
           <Ul>
             <Li>Test</Li>
             <Li>Test</Li>
@@ -21,23 +39,8 @@ const App = () => {
             <Li>Test</Li>
             <Li>Test</Li>
           </Ul>
-        </ReactScrollShadow>
-      </Card>
-      <Card style={{ overflowY: 'scroll' }}>
-        <Ul>
-          <Li>Test</Li>
-          <Li>Test</Li>
-          <Li>Test</Li>
-          <Li>Test</Li>
-          <Li>Test</Li>
-          <Li>Test</Li>
-          <Li>Test</Li>
-          <Li>Test</Li>
-          <Li>Test</Li>
-          <Li>Test</Li>
-          <Li>Test</Li>
-        </Ul>
-      </Card>
+        </Card>
+      </Row>
     </Container>
   );
 };

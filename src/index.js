@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import ReactResizeDetector from 'react-resize-detector';
 import withStyles from 'react-jss';
 
-export class ScrollShadowComponent extends React.Component {
+export class ShadowScrollComponent extends React.Component {
   constructor(props) {
     super(props);
 
@@ -40,13 +40,13 @@ export class ScrollShadowComponent extends React.Component {
   }
 }
 
-ScrollShadowComponent.propTypes = {
+ShadowScrollComponent.propTypes = {
   scrollColor: PropTypes.string,
   scrollColorHover: PropTypes.string,
   scrollWidth: PropTypes.number
 };
 
-ScrollShadowComponent.defaultProps = {
+ShadowScrollComponent.defaultProps = {
   scrollColor: '#c5c5c5',
   scrollColorHover: '#a6a6a6',
   scrollWidth: 5,
@@ -83,4 +83,4 @@ const styles = {
   }
 };
 
-export default withStyles(styles)(ScrollShadowComponent);
+export default withStyles(styles)(ShadowScrollComponent);
