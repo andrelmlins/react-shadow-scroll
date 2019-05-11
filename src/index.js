@@ -43,14 +43,16 @@ export class ShadowScrollComponent extends React.Component {
 ShadowScrollComponent.propTypes = {
   scrollColor: PropTypes.string,
   scrollColorHover: PropTypes.string,
-  scrollWidth: PropTypes.number
+  scrollWidth: PropTypes.number,
+  isShadow: PropTypes.bool
 };
 
 ShadowScrollComponent.defaultProps = {
   scrollColor: '#c5c5c5',
   scrollColorHover: '#a6a6a6',
   scrollWidth: 5,
-  scrollPadding: 0
+  scrollPadding: 0,
+  isShadow: true
 };
 
 const styles = {

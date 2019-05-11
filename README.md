@@ -51,3 +51,4 @@ Raw component props (before transform):
 | scrollColorHover | #a6a6a6 | string | Scroll color when hover |
 | scrollWidth | 5 | number | Scroll Width |
 | scrollPadding | 0 | number | Left scroll padding |
+| isShadow | true | boolean | View shadow |
