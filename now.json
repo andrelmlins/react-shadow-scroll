@@ -2,7 +2,7 @@
     "version": 2,
     "name": "react-shadow-scroll-example",
     "builds": [
-        { "src": "example/package.json", "use": "@now/static-build", "config": { "distDir": "build" } }
+        { "src": "example/package.json", "use": "@now/static-build", "config": { "distDir": "example/build" } }
     ],
     "routes": [
       { "src": "/static/(.*)", "headers": { "cache-control": "s-maxage=31536000,immutable" }, "dest": "/static/$1" },
