@@ -1,5 +1,6 @@
-# React Scroll Shadow
+# React Shadow Scroll
 
+Component that customizes the image and inserts shadow when scrolling exists
 
 ## Installation
 
@@ -9,7 +10,7 @@ npm i react-shadow-scroll
 yarn add react-shadow-scroll
 ```
 
-## Demo
+## Demo [Link](https://react-shadow-scroll.now.sh/)
 
 Local demo:
 
@@ -31,7 +32,9 @@ class App extends PureComponent {
     return (
       <div>
         <ReactShadowScroll>
-            Scroll
+          <ul>
+            <li></li>
+          </ul>
         </ReactShadowScroll>
       </div>
     );

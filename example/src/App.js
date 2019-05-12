@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactShadowScroll from 'react-shadow-Scroll';
+import ReactShadowScroll from 'react-shadow-scroll';
 
 import { Container, Ul, Li, Card, Title, Row } from './styleds';
 
