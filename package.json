@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "description": "React Shadow Scroll",
   "main": "dist/index.js",
-  "homepage": "https://react-shadow-scroll.now.sh/",
+  "homepage": "https://react-shadow-scroll.netlify.com/",
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir dist --ignore *.spec.js --copy-files",
     "test": "yarn test"

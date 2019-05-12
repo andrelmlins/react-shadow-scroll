@@ -2,7 +2,6 @@
   "name": "react-shadow-scroll-example",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://react-shadow-scroll.now.sh/",
   "dependencies": {
     "linklocal": "^2.8.2",
     "react": "^16.8.6",
