@@ -73,8 +73,8 @@ const styles = {
   subcontainer: {
     overflowY: 'auto',
     flex: '1',
-    scrollbarColor: props => props.scrollColor,
-    scrollbarWidth: props => props.scrollWidth,
+    scrollbarColor: props => props.scrollColor + ' transparent',
+    scrollbarWidth: 'thin',
     '&::-webkit-scrollbar': {
       width: props => props.scrollWidth,
       background: 'transparent'
