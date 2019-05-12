@@ -6,7 +6,7 @@
   "homepage": "https://react-shadow-scroll.netlify.com/",
   "scripts": {
     "build": "cross-env NODE_ENV=production babel src --out-dir dist --ignore *.spec.js --copy-files",
-    "test": "yarn test"
+    "lint": "eslint src/**/*.js"
   },
   "repository": {
     "type": "git",
@@ -28,13 +28,23 @@
     "@babel/plugin-proposal-class-properties": "^7.4.4",
     "@babel/preset-env": "^7.4.4",
     "@babel/preset-react": "^7.0.0",
+    "babel-eslint": "^10.0.1",
     "cross-env": "^5.2.0",
+    "enzyme": "^3.9.0",
+    "eslint": "^5.16.0",
+    "eslint-plugin-jest": "^22.5.1",
+    "eslint-plugin-jsx-a11y": "^6.2.1",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.13.0",
+    "prettier": "^1.17.0",
     "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "react-dom": "^16.8.6",
+    "react-jss": "^8.6.1"
   },
   "dependencies": {
-    "babel-plugin-styled-components": "^1.10.0",
-    "react-jss": "^8.6.1",
     "react-resize-detector": "^4.1.3"
+  },
+  "publishConfig": {
+    "registry": "https://npmo-demo-registry.npmjs.com"
   }
 }
