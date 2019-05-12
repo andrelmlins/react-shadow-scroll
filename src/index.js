@@ -44,33 +44,37 @@ ShadowScrollComponent.propTypes = {
   scrollColor: PropTypes.string,
   scrollColorHover: PropTypes.string,
   scrollWidth: PropTypes.number,
-  isShadow: PropTypes.bool
+  isShadow: PropTypes.bool,
+  shadow: PropTypes.string
 };
 
 ShadowScrollComponent.defaultProps = {
   scrollColor: '#c5c5c5',
   scrollColorHover: '#a6a6a6',
-  scrollWidth: 5,
+  scrollWidth: 8,
   scrollPadding: 0,
-  isShadow: true
+  isShadow: true,
+  shadow:
+    '0 2px 4px rgba(0, 0, 0, 0.2) inset, 0 -2px 4px rgba(0, 0, 0, 0.2) inset'
 };
 
 const styles = {
   containerScroll: {
     padding: props => props.scrollPadding,
     paddingRight: 0,
-    boxSizing: 'border-box',
-    boxShadow:
-      '0 2px 4px rgba(0, 0, 0, 0.08) inset, 0 -2px 4px rgba(0, 0, 0, 0.08) inset'
+    boxShadow: props => (props.isShadow ? props.shadow : 'none')
   },
   container: {
     width: '100%',
-    maxHeight: 'inherit',
-    overflowY: 'hidden'
+    overflowY: 'hidden',
+    boxSizing: 'border-box',
+    display: 'flex'
   },
   subcontainer: {
     overflowY: 'auto',
-    maxHeight: 'inherit',
+    flex: '1',
+    scrollbarColor: props => props.scrollColor,
+    scrollbarWidth: props => props.scrollWidth,
     '&::-webkit-scrollbar': {
       width: props => props.scrollWidth,
       background: 'transparent'
