@@ -6,12 +6,11 @@ cache: yarn
 
 install: yarn
 script:
-  - yarn build
   - yarn lint
 
 jobs:
   include:
-    - stage: npm release
+    - stage: yarn build
       if: tag IS present
       node_js: "8"
       script: echo "Deploying to npm ..."
