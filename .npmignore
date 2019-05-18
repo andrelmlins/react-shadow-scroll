@@ -1,0 +1,9 @@
+node_modules/
+build/
+
+.prettierrc
+.babelrc
+.eslintrc.json
+yarn-error.log
+yarn.lock
+.travis.yml
