@@ -60,8 +60,6 @@ ShadowScrollComponent.defaultProps = {
 
 const styles = {
   containerScroll: {
-    padding: props => props.scrollPadding,
-    paddingRight: 0,
     boxShadow: props => (props.isShadow ? props.shadow : 'none')
   },
   container: {
@@ -71,6 +69,7 @@ const styles = {
     display: 'flex'
   },
   subcontainer: {
+    paddingRight: props => props.scrollPadding,
     overflowY: 'auto',
     flex: '1',
     scrollbarColor: props => props.scrollColor + ' transparent',
