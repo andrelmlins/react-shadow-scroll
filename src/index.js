@@ -23,10 +23,11 @@ export class ShadowScrollComponent extends React.Component {
   };
 
   render() {
-    const { classes } = this.props;
+    const { classes, style } = this.props;
 
     return (
       <div
+        style={style}
         className={`${classes.container} ${
           this.state.scroll ? classes.containerScroll : ''
         }`}
