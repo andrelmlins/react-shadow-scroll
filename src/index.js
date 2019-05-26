@@ -23,7 +23,7 @@ export class ShadowScrollComponent extends React.Component {
   };
 
   render() {
-    const { classes, style } = this.props;
+    const { classes, style, styleSubcontainer } = this.props;
 
     return (
       <div
@@ -32,7 +32,11 @@ export class ShadowScrollComponent extends React.Component {
           this.state.scroll ? classes.containerScroll : ''
         }`}
       >
-        <div ref={this.ref} className={classes.subcontainer}>
+        <div
+          ref={this.ref}
+          className={classes.subcontainer}
+          style={styleSubcontainer}
+        >
           {this.props.children}
           <ReactResizeDetector handleHeight onResize={this.resizeTags} />
         </div>
