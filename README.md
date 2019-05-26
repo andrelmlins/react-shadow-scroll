@@ -58,3 +58,5 @@ Raw component props (before transform):
 | scrollPadding | 0 | number | Left scroll padding |
 | isShadow | true | boolean | View shadow |
 | shadow | '0 2px 4px rgba(0, 0, 0, 0.2) inset, 0 -2px 4px rgba(0, 0, 0, 0.2) inset' | string | Shadow
+| style | null | object | Style in Container
+| styleSubcontainer | null | object | Style in Subcontainer
