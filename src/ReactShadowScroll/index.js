@@ -1,49 +1,40 @@
-import React from 'react';
+import React, { useState, useRef, memo } from 'react';
 import PropTypes from 'prop-types';
 import ReactResizeDetector from 'react-resize-detector';
 import withStyles from 'react-jss';
 
-export class ShadowScrollComponent extends React.Component {
-  constructor(props) {
-    super(props);
+export const ShadowScrollComponent = ({
+  classes,
+  children,
+  style,
+  styleSubcontainer
+}) => {
+  const [scroll, setScroll] = useState(false);
+  const ref = useRef();
 
-    this.state = {
-      scroll: false
-    };
-
-    this.ref = React.createRef();
-  }
-
-  resizeTags = () => {
-    if (this.ref.current.clientHeight < this.ref.current.scrollHeight) {
-      this.setState({ scroll: true });
-    } else {
-      this.setState({ scroll: false });
-    }
-  };
-
-  render() {
-    const { classes, style, styleSubcontainer } = this.props;
-
-    return (
-      <div
-        style={style}
-        className={`${classes.container} ${
-          this.state.scroll ? classes.containerScroll : ''
-        }`}
-      >
-        <div
-          ref={this.ref}
-          className={classes.subcontainer}
-          style={styleSubcontainer}
-        >
-          {this.props.children}
-          <ReactResizeDetector handleHeight onResize={this.resizeTags} />
-        </div>
+  return (
+    <div
+      style={style}
+      className={`${classes.container} ${
+        scroll ? classes.containerScroll : ''
+      }`}
+    >
+      <div ref={ref} className={classes.subcontainer} style={styleSubcontainer}>
+        {children}
+        <ReactResizeDetector
+          handleHeight
+          onResize={() => {
+            if (ref.current.clientHeight < ref.current.scrollHeight) {
+              setScroll(true);
+            } else {
+              setScroll(false);
+            }
+          }}
+        />
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 ShadowScrollComponent.propTypes = {
   scrollColor: PropTypes.string,
@@ -93,4 +84,4 @@ const styles = {
   }
 };
 
-export default withStyles(styles)(ShadowScrollComponent);
+export default memo(withStyles(styles)(ShadowScrollComponent));
