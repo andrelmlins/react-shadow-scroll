@@ -9,8 +9,8 @@ export const ShadowScrollComponent = ({
   style,
   styleSubcontainer
 }) => {
-  const [scroll, setScroll] = useState(false);
   const ref = useRef();
+  const [scroll, setScroll] = useState(false);
 
   return (
     <div

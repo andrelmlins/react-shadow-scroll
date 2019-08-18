@@ -8,10 +8,10 @@
     "react-dom": "^16.9.0",
     "react-scripts": "3.1.1",
     "styled-components": "^4.3.2",
-    "react-shadow-scroll": "file:../"
+    "react-shadow-scroll": "0.2.10"
   },
   "scripts": {
-    "start": "linklocal && react-scripts start",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
