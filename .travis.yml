@@ -11,6 +11,8 @@ jobs:
       language: node_js
       node_js: "8"
       script: yarn lint
+    - stage: changelog
+      language: luancarloshs/change-log
     - stage: npm release
       language: node_js
       if: tag IS present
