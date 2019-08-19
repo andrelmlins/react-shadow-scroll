@@ -1,16 +1,18 @@
-language: node_js
-node_js:
-  - "8"
-  - "10"
-cache: yarn
-install: yarn install
-
 jobs:
   include:
+    - stage: install
+      node_js: "8"
+      script: yarn install
+      node_js:
+        - "8"
+        - "10"
+      cache: yarn
     - stage: lint
+      language: node_js
       node_js: "8"
       script: yarn lint
     - stage: npm release
+      language: node_js
       if: tag IS present
       node_js: "8"
       script: yarn build
