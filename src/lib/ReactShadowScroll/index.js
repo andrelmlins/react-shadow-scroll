@@ -14,12 +14,18 @@ export const ShadowScrollComponent = ({
 
   return (
     <div
+      aria-label="container-scroll"
       style={style}
       className={`${classes.container} ${
         scroll ? classes.containerScroll : ''
       }`}
     >
-      <div ref={ref} className={classes.subcontainer} style={styleSubcontainer}>
+      <div
+        aria-label="subcontainer-scroll"
+        ref={ref}
+        className={classes.subcontainer}
+        style={styleSubcontainer}
+      >
         {children}
         <ReactResizeDetector
           handleHeight
