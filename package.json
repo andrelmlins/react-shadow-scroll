@@ -1,6 +1,6 @@
 {
   "name": "react-shadow-scroll",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Component that customizes the image and inserts shadow when scrolling exists",
   "main": "dist/index.js",
   "module": "dist/index.js",
