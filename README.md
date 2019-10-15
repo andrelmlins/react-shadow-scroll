@@ -25,23 +25,20 @@ yarn install && yarn start
 ## Examples
 
 ```jsx
-import React, { PureComponent } from 'react';
+import React from 'react';
 import { render } from 'react-dom';
 import ReactShadowScroll from 'react-shadow-scroll';
 
-class App extends PureComponent {
-  render() {
-    return (
-      <div>
-        <ReactShadowScroll>
-          <ul>
-            <li></li>
-          </ul>
-        </ReactShadowScroll>
-      </div>
-    );
-  }
-}
+const App = () => (
+  <ReactShadowScroll>
+    <ul>
+      <li>Teste</li>
+      <li>Teste</li>
+      <li>Teste</li>
+      <li>Teste</li>
+    </ul>
+  </ReactShadowScroll>
+);
 
 render(<App />, document.getElementById('root'));
 ```
