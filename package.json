@@ -7,9 +7,9 @@
   "homepage": "https://react-shadow-scroll.netlify.com/",
   "author": "André Lins <andrelucas01@hotmail.com> (https://andrelmlins.github.io/)",
   "scripts": {
-    "start": "webpack-dev-server --progress --inline --hot --port 8080 --mode=development",
+    "start": "react-dependency-scripts start",
     "start:prod": "webpack-cli --mode=production",
-    "build": "cross-env NODE_ENV=production babel src/lib --out-dir dist --ignore *.spec.js --copy-files",
+    "build": "react-dependency-scripts build",
     "lint": "eslint src/**/*.js",
     "test": "jest",
     "coverage": "npm test -- --coverage"
@@ -50,6 +50,7 @@
     "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "react": "^16.11.0",
+    "react-dependency-scripts": "^0.0.5",
     "react-dom": "^16.11.0",
     "styled-components": "^4.4.1",
     "uglifyjs-webpack-plugin": "^2.2.0",
