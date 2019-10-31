@@ -6548,10 +6548,10 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dependency-scripts@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/react-dependency-scripts/-/react-dependency-scripts-0.0.5.tgz#51c66adb3463e08b3157862a9468eeae97710dea"
-  integrity sha512-DwTTjnt1NyuXIH2fX2pOZ6TNkc5WaVCQiUWz+PAnH4+qUstJRPvbJTVraiTUJW6B/9Oh304UWE0/t10gj8tMxg==
+react-dependency-scripts@^0.0.6:
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/react-dependency-scripts/-/react-dependency-scripts-0.0.6.tgz#2506cfd915e38e7b5d4e76f43cf55bacf96ae809"
+  integrity sha512-lvob4UtZ+ke8narIfrQxOkN2C62vILrqHOOJfFaqNYOvKeHG9btUqGLPMkPk0PpwtQmrD0VuQ6DbEUYB4O/geg==
   dependencies:
     "@babel/core" "^7.6.4"
     "@babel/plugin-proposal-class-properties" "^7.5.5"
