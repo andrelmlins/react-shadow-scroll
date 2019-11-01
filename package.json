@@ -33,23 +33,19 @@
   "devDependencies": {
     "@testing-library/react": "^9.3.1",
     "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
-    "cross-env": "^6.0.3",
     "eslint": "^6.6.0",
     "eslint-plugin-jest": "^23.0.2",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
-    "jest": "^24.9.0",
     "prettier": "^1.18.2",
     "react": "^16.11.0",
-    "react-dependency-scripts": "^0.0.6",
+    "react-dependency-scripts": "^0.1.1",
     "react-dom": "^16.11.0",
     "styled-components": "^4.4.1",
     "uglifyjs-webpack-plugin": "^2.2.0"
   },
   "dependencies": {
-    "babel-jest": "^24.9.0",
     "react-jss": "^10.0.0",
     "react-resize-detector": "^4.2.1"
   }
