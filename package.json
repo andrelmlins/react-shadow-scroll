@@ -8,7 +8,7 @@
   "author": "André Lins <andrelucas01@hotmail.com> (https://andrelmlins.github.io/)",
   "scripts": {
     "start": "react-dependency-scripts start",
-    "start:prod": "webpack-cli --mode=production",
+    "start:prod": "webpack-cli",
     "build": "react-dependency-scripts build",
     "lint": "eslint src/**/*.js",
     "test": "react-dependency-scripts test",
@@ -40,10 +40,10 @@
     "eslint-plugin-react": "^7.16.0",
     "prettier": "^1.18.2",
     "react": "^16.11.0",
-    "react-dependency-scripts": "^0.1.1",
+    "react-dependency-scripts": "^0.2.2",
     "react-dom": "^16.11.0",
     "styled-components": "^4.4.1",
-    "uglifyjs-webpack-plugin": "^2.2.0"
+    "webpack-cli": "^3.3.10"
   },
   "dependencies": {
     "react-jss": "^10.0.0",
