@@ -1,6 +1,6 @@
-import React, { useState, useRef, memo } from 'react';
+import React, { useState, useRef, useLayoutEffect, memo } from 'react';
+import ResizeObserver from 'resize-observer-polyfill';
 import PropTypes from 'prop-types';
-import ReactResizeDetector from 'react-resize-detector';
 import withStyles from 'react-jss';
 
 export const ShadowScrollComponent = ({
@@ -11,6 +11,21 @@ export const ShadowScrollComponent = ({
 }) => {
   const ref = useRef();
   const [scroll, setScroll] = useState(false);
+
+  useLayoutEffect(() => {
+    let RO = new ResizeObserver(() => {
+      if (ref.current.clientHeight < ref.current.scrollHeight) {
+        setScroll(true);
+      } else {
+        setScroll(false);
+      }
+    });
+    RO.observe(ref.current);
+
+    return () => {
+      RO.disconnect();
+    };
+  }, [ref]);
 
   return (
     <div
@@ -27,16 +42,6 @@ export const ShadowScrollComponent = ({
         style={styleSubcontainer}
       >
         {children}
-        <ReactResizeDetector
-          handleHeight
-          onResize={() => {
-            if (ref.current.clientHeight < ref.current.scrollHeight) {
-              setScroll(true);
-            } else {
-              setScroll(false);
-            }
-          }}
-        />
       </div>
     </div>
   );
