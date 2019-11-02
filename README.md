@@ -57,3 +57,8 @@ Raw component props (before transform):
 | shadow | '0 2px 4px rgba(0, 0, 0, 0.2) inset, 0 -2px 4px rgba(0, 0, 0, 0.2) inset' | string | Shadow
 | style | null | object | Style in Container
 | styleSubcontainer | null | object | Style in Subcontainer
+
+
+## License
+
+React Shadow Scroll is open source software [licensed as MIT](https://github.com/andrelmlins/react-shadow-scroll/blob/master/LICENSE).
