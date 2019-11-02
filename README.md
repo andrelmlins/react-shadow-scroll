@@ -58,6 +58,11 @@ Raw component props (before transform):
 | style | null | object | Style in Container
 | styleSubcontainer | null | object | Style in Subcontainer
 
+## NPM Statistics
+
+Download stats for this NPM package
+
+[![NPM](https://nodei.co/npm/react-shadow-scroll.png)](https://nodei.co/npm/react-shadow-scroll/)
 
 ## License
 
