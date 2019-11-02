@@ -2,54 +2,44 @@ import React from 'react';
 import ReactShadowScroll from '../lib';
 
 import { Container, Ul, Li, Card, Title, Subtitle, Row } from './styleds';
+import Badge from './Badge';
 
 import cars from './cars';
 
 const App = () => (
   <Container>
     <Title>React Shadow Scroll</Title>
-    <p style={{ color: 'white' }}>
-      <a href="https://www.npmjs.com/package/react-shadow-scroll">
-        <img
-          src="https://badge.fury.io/js/react-shadow-scroll.svg"
-          alt="npm version"
-        />
-      </a>
-      {' • '}
-      <a href="https://github.com/andrelmlins/react-shadow-scroll/blob/master/LICENSE">
-        <img
-          src="https://img.shields.io/badge/License-MIT-yellow.svg"
-          alt="License: MIT"
-        />
-      </a>
-      {' • '}
-      <a href="https://travis-ci.com/andrelmlins/react-shadow-scroll">
-        <img
-          src="https://travis-ci.com/andrelmlins/react-shadow-scroll.svg?branch=master"
-          alt="Build Status"
-        />
-      </a>
-      {' • '}
-      <a href="https://david-dm.org/andrelmlins/react-shadow-scroll">
-        <img
-          src="https://david-dm.org/andrelmlins/react-shadow-scroll.svg"
-          alt="Dependencies"
-        />
-      </a>
-      {' • '}
-      <a href="https://app.netlify.com/sites/react-shadow-scroll/deploys">
-        <img
-          src="https://api.netlify.com/api/v1/badges/6061e313-a774-4951-b9da-3c11bc5040e8/deploy-status"
-          alt="Netlify Status"
-        />
-      </a>
-      {' • '}
-      <a href="https://lgtm.com/projects/g/andrelmlins/react-shadow-scroll/context:javascript">
-        <img
-          src="https://img.shields.io/lgtm/grade/javascript/g/andrelmlins/react-shadow-scroll.svg?logo=lgtm&logoWidth=18"
-          alt="Language grade: JavaScript"
-        />
-      </a>
+    <p>
+      <Badge
+        url="https://www.npmjs.com/package/react-shadow-scroll"
+        image="https://badge.fury.io/js/react-shadow-scroll.svg"
+        text="npm version"
+      />
+      <Badge
+        url="https://github.com/andrelmlins/react-shadow-scroll/blob/master/LICENSE"
+        image="https://img.shields.io/badge/License-MIT-yellow.svg"
+        text="License: MIT"
+      />
+      <Badge
+        url="https://travis-ci.com/andrelmlins/react-shadow-scroll"
+        image="https://travis-ci.com/andrelmlins/react-shadow-scroll.svg?branch=master"
+        text="Build Status"
+      />
+      <Badge
+        url="https://david-dm.org/andrelmlins/react-shadow-scroll"
+        image="https://david-dm.org/andrelmlins/react-shadow-scroll.svg"
+        text="Dependencies"
+      />
+      <Badge
+        url="https://app.netlify.com/sites/react-shadow-scroll/deploys"
+        image="https://api.netlify.com/api/v1/badges/6061e313-a774-4951-b9da-3c11bc5040e8/deploy-status"
+        text="Netlify Status"
+      />
+      <Badge
+        url="https://lgtm.com/projects/g/andrelmlins/react-shadow-scroll/context:javascript"
+        image="https://img.shields.io/lgtm/grade/javascript/g/andrelmlins/react-shadow-scroll.svg?logo=lgtm&logoWidth=18"
+        text="Language grade: JavaScript"
+      />
     </p>
     <Row>
       <Card>

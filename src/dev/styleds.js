@@ -61,6 +61,13 @@ export const Subtitle = styled.p`
   text-align: center;
 `;
 
+export const Badge = styled.a`
+  margin-right: 10px;
+  &:last-child {
+    margin-right: 0px;
+  }
+`;
+
 export default {
   Container,
   Ul,
@@ -68,5 +75,6 @@ export default {
   Card,
   Row,
   Title,
-  Subtitle
+  Subtitle,
+  Badge
 };
