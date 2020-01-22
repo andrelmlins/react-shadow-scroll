@@ -7,7 +7,8 @@ export const ShadowScrollComponent = ({
   classes,
   children,
   style,
-  styleSubcontainer
+  styleSubcontainer,
+  ...props
 }) => {
   const ref = useRef();
   const [scroll, setScroll] = useState(false);
@@ -34,6 +35,7 @@ export const ShadowScrollComponent = ({
       className={`${classes.container} ${
         scroll ? classes.containerScroll : ''
       }`}
+      {...props}
     >
       <div
         aria-label="subcontainer-scroll"
