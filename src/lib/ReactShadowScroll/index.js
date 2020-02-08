@@ -1,15 +1,28 @@
 import React, { useState, useRef, useLayoutEffect, memo } from 'react';
 import ResizeObserver from 'resize-observer-polyfill';
 import PropTypes from 'prop-types';
-import withStyles from 'react-jss';
+import { createUseStyles } from 'react-jss';
 
-export const ShadowScrollComponent = ({
-  classes,
+const ShadowScrollComponent = ({
   children,
   style,
   styleSubcontainer,
+  scrollPadding,
+  scrollColor,
+  scrollWidth,
+  isShadow,
+  shadow,
+  scrollColorHover,
   ...props
 }) => {
+  const classes = useStyles({
+    scrollPadding,
+    scrollColor,
+    scrollWidth,
+    isShadow,
+    scrollColorHover,
+    shadow
+  });
   const ref = useRef();
   const [scroll, setScroll] = useState(false);
 
@@ -49,25 +62,7 @@ export const ShadowScrollComponent = ({
   );
 };
 
-ShadowScrollComponent.propTypes = {
-  scrollColor: PropTypes.string,
-  scrollColorHover: PropTypes.string,
-  scrollWidth: PropTypes.number,
-  isShadow: PropTypes.bool,
-  shadow: PropTypes.string
-};
-
-ShadowScrollComponent.defaultProps = {
-  scrollColor: '#c5c5c5',
-  scrollColorHover: '#a6a6a6',
-  scrollWidth: 8,
-  scrollPadding: 0,
-  isShadow: true,
-  shadow:
-    '0 2px 4px rgba(0, 0, 0, 0.2) inset, 0 -2px 4px rgba(0, 0, 0, 0.2) inset'
-};
-
-const styles = {
+const useStyles = createUseStyles({
   containerScroll: {
     boxShadow: props => (props.isShadow ? props.shadow : 'none')
   },
@@ -95,6 +90,24 @@ const styles = {
       '&:hover': { background: props => props.scrollColorHover }
     }
   }
+});
+
+ShadowScrollComponent.propTypes = {
+  scrollColor: PropTypes.string,
+  scrollColorHover: PropTypes.string,
+  scrollWidth: PropTypes.number,
+  isShadow: PropTypes.bool,
+  shadow: PropTypes.string
 };
 
-export default memo(withStyles(styles)(ShadowScrollComponent));
+ShadowScrollComponent.defaultProps = {
+  scrollColor: '#c5c5c5',
+  scrollColorHover: '#a6a6a6',
+  scrollWidth: 8,
+  scrollPadding: 0,
+  isShadow: true,
+  shadow:
+    '0 2px 4px rgba(0, 0, 0, 0.2) inset, 0 -2px 4px rgba(0, 0, 0, 0.2) inset'
+};
+
+export default memo(ShadowScrollComponent);
