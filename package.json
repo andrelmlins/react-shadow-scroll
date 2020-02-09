@@ -8,11 +8,11 @@
   "author": "André Lins <andrelucas01@hotmail.com> (https://andrelmlins.github.io/)",
   "scripts": {
     "start": "react-dependency-scripts start",
-    "start:prod": "webpack-cli",
     "build": "react-dependency-scripts build",
-    "lint": "eslint src/**/*.js",
+    "build:app": "react-dependency-scripts build-app",
     "test": "react-dependency-scripts test",
-    "coverage": "react-dependency-scripts test --coverage"
+    "coverage": "react-dependency-scripts test --coverage",
+    "lint": "eslint src/**/*.js"
   },
   "files": [
     "dist"
@@ -33,18 +33,16 @@
   "devDependencies": {
     "@testing-library/react": "^9.4.0",
     "babel-eslint": "^10.0.3",
-    "babel-loader": "^8.0.6",
     "eslint": "^6.8.0",
-    "eslint-plugin-jest": "^23.6.0",
+    "eslint-plugin-jest": "^23.7.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
     "prettier": "^1.19.1",
     "react": "^16.12.0",
-    "react-dependency-scripts": "^0.5.1",
+    "react-dependency-scripts": "^0.6.0",
     "react-dom": "^16.12.0",
-    "styled-components": "^5.0.1",
-    "webpack-cli": "^3.3.10"
+    "styled-components": "^5.0.1"
   },
   "dependencies": {
     "react-jss": "^10.0.4",
