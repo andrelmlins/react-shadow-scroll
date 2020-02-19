@@ -47,16 +47,15 @@ render(<App />, document.getElementById('root'));
 
 Raw component props (before transform):
 
-| Prop  | Default  | Type  | Description  |
-|---|---|---|---|
-| scrollColor | #c5c5c5 | string | Scroll color |
-| scrollColorHover | #a6a6a6 | string | Scroll color when hover |
-| scrollWidth | 5 | number | Scroll Width |
-| scrollPadding | 0 | number | Left scroll padding |
-| isShadow | true | boolean | View shadow |
-| shadow | '0 2px 4px rgba(0, 0, 0, 0.2) inset, 0 -2px 4px rgba(0, 0, 0, 0.2) inset' | string | Shadow
-| style | null | object | Style in Container
-| styleSubcontainer | null | object | Style in Subcontainer
+| Prop              | Default                                                                   | Type    | Description             |
+| ----------------- | ------------------------------------------------------------------------- | ------- | ----------------------- |
+| scrollColor       | #c5c5c5                                                                   | string  | Scroll color            |
+| scrollColorHover  | #a6a6a6                                                                   | string  | Scroll color when hover |
+| scrollWidth       | 5                                                                         | number  | Scroll Width            |
+| scrollPadding     | 0                                                                         | number  | Left scroll padding     |
+| isShadow          | true                                                                      | boolean | View shadow             |
+| shadow            | '0 2px 4px rgba(0, 0, 0, 0.2) inset, 0 -2px 4px rgba(0, 0, 0, 0.2) inset' | string  | Shadow                  |
+| styleSubcontainer | null                                                                      | object  | Style in Subcontainer   |
 
 ## NPM Statistics
 

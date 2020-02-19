@@ -93,11 +93,18 @@ const useStyles = createUseStyles({
 });
 
 ReactShadowScrollComponent.propTypes = {
+  /** Scroll color */
   scrollColor: PropTypes.string,
+  /** Scroll color when hover */
   scrollColorHover: PropTypes.string,
+  /** Scroll width */
   scrollWidth: PropTypes.number,
+  /** Option to show the shadow */
   isShadow: PropTypes.bool,
-  shadow: PropTypes.string
+  /** Shadow Style */
+  shadow: PropTypes.string,
+  /** Subcontainer Style */
+  styleSubcontainer: PropTypes.object
 };
 
 ReactShadowScrollComponent.defaultProps = {
