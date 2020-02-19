@@ -3,7 +3,7 @@ import ResizeObserver from 'resize-observer-polyfill';
 import PropTypes from 'prop-types';
 import { createUseStyles } from 'react-jss';
 
-const ShadowScrollComponent = ({
+const ReactShadowScrollComponent = ({
   children,
   style,
   styleSubcontainer,
@@ -92,7 +92,7 @@ const useStyles = createUseStyles({
   }
 });
 
-ShadowScrollComponent.propTypes = {
+ReactShadowScrollComponent.propTypes = {
   scrollColor: PropTypes.string,
   scrollColorHover: PropTypes.string,
   scrollWidth: PropTypes.number,
@@ -100,7 +100,7 @@ ShadowScrollComponent.propTypes = {
   shadow: PropTypes.string
 };
 
-ShadowScrollComponent.defaultProps = {
+ReactShadowScrollComponent.defaultProps = {
   scrollColor: '#c5c5c5',
   scrollColorHover: '#a6a6a6',
   scrollWidth: 8,
@@ -110,4 +110,4 @@ ShadowScrollComponent.defaultProps = {
     '0 2px 4px rgba(0, 0, 0, 0.2) inset, 0 -2px 4px rgba(0, 0, 0, 0.2) inset'
 };
 
-export default memo(ShadowScrollComponent);
+export default memo(ReactShadowScrollComponent);
