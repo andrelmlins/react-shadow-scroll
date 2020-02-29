@@ -31,17 +31,17 @@
     "url": "https://github.com/andrelmlins/react-shadow-scroll/issues"
   },
   "devDependencies": {
-    "@testing-library/react": "^9.4.0",
-    "babel-eslint": "^10.0.3",
+    "@testing-library/react": "^9.4.1",
+    "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
-    "eslint-plugin-jest": "^23.7.0",
+    "eslint-plugin-jest": "^23.8.0",
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.2",
     "eslint-plugin-react": "^7.18.3",
     "prettier": "^1.19.1",
-    "react": "^16.12.0",
-    "react-dependency-scripts": "^0.6.1",
-    "react-dom": "^16.12.0",
+    "react": "^16.13.0",
+    "react-dependency-scripts": "^1.0.0",
+    "react-dom": "^16.13.0",
     "styled-components": "^5.0.1"
   },
   "dependencies": {
