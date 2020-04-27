@@ -1,7 +1,7 @@
 {
   "name": "react-shadow-scroll",
   "version": "1.0.0",
-  "description": "Component that customizes the image and inserts shadow when scrolling exists",
+  "description": "Component that customizes the list and inserts shadow when scrolling exists",
   "main": "dist/index.js",
   "module": "dist/index.js",
   "homepage": "https://react-shadow-scroll.netlify.com/",
