@@ -1,10 +1,4 @@
-import React, {
-  useState,
-  useRef,
-  useLayoutEffect,
-  memo,
-  useEffect
-} from 'react';
+import React, { useState, useRef, useLayoutEffect, memo } from 'react';
 import Style from 'style-it';
 import ResizeObserver from 'resize-observer-polyfill';
 import PropTypes from 'prop-types';
@@ -38,14 +32,6 @@ const ReactShadowScrollComponent = ({
       RO.disconnect();
     };
   }, [ref]);
-
-  useEffect(() => {
-    // var style = document.createElement('style');
-    // style.type = 'text/css';
-    // style.innerHTML = '.cssClass { color: #F00; }';
-    // document.getElementsByTagName('head')[0].appendChild(style);
-    // document.getElementById('someElementId').className = 'cssClass';
-  }, [scroll]);
 
   const styleCustom = `
     .container {
@@ -81,7 +67,7 @@ const ReactShadowScrollComponent = ({
       <div
         aria-label="container-scroll"
         style={style}
-        className={`container`}
+        className="container"
         {...props}
       >
         <div
