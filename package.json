@@ -45,8 +45,8 @@
     "styled-components": "^5.0.1"
   },
   "dependencies": {
-    "react-jss": "^10.1.1",
-    "resize-observer-polyfill": "^1.5.1"
+    "resize-observer-polyfill": "^1.5.1",
+    "style-it": "^2.1.4"
   },
   "jest": {
     "coverageThreshold": {

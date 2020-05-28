@@ -1,7 +1,13 @@
-import React, { useState, useRef, useLayoutEffect, memo } from 'react';
+import React, {
+  useState,
+  useRef,
+  useLayoutEffect,
+  memo,
+  useEffect
+} from 'react';
+import Style from 'style-it';
 import ResizeObserver from 'resize-observer-polyfill';
 import PropTypes from 'prop-types';
-import { createUseStyles } from 'react-jss';
 
 const ReactShadowScrollComponent = ({
   children,
@@ -41,56 +47,63 @@ const ReactShadowScrollComponent = ({
     };
   }, [ref]);
 
+  useEffect(() => {
+    // var style = document.createElement('style');
+    // style.type = 'text/css';
+    // style.innerHTML = '.cssClass { color: #F00; }';
+    // document.getElementsByTagName('head')[0].appendChild(style);
+    // document.getElementById('someElementId').className = 'cssClass';
+  }, [scroll]);
+
+  const styleCustom = `
+    .container {
+      width: 100%;
+      overflow-y: hidden;
+      box-sizing: border-box;
+      display: flex;
+      box-shadow: ${isShadow && scroll ? shadow : 'none'}
+    }
+    .subcontainer {
+      padding-right: ${scrollPadding}px;
+      overflow-y: auto;
+      flex: 1;
+      scrollbar-color: ${scrollColor + ' transparent'};
+      scrollbar-width: thin;
+    }
+    .subcontainer::-webkit-scrollbar {
+      width: ${scrollWidth}px;
+      background: transparent;
+    },
+    .subcontainer::-webkit-scrollbar-track { background: transparent }
+    .subcontainer::-webkit-scrollbar-thumb {
+      background: ${scrollColor};
+      border-radius: 5px;
+      overflow: hidden;
+    }
+    .subcontainer::-webkit-scrollbar-thumb:hover { background: ${scrollColorHover} }
+  `;
+
   return (
-    <div
-      aria-label="container-scroll"
-      style={style}
-      className={`${classes.container} ${
-        scroll ? classes.containerScroll : ''
-      }`}
-      {...props}
-    >
+    <Style>
+      {styleCustom}
       <div
-        aria-label="subcontainer-scroll"
-        ref={ref}
-        className={classes.subcontainer}
-        style={styleSubcontainer}
+        aria-label="container-scroll"
+        style={style}
+        className={`container`}
+        {...props}
       >
-        {children}
+        <div
+          aria-label="subcontainer-scroll"
+          ref={ref}
+          className="subcontainer"
+          style={styleSubcontainer}
+        >
+          {children}
+        </div>
       </div>
-    </div>
+    </Style>
   );
 };
-
-const useStyles = createUseStyles({
-  containerScroll: {
-    boxShadow: props => (props.isShadow ? props.shadow : 'none')
-  },
-  container: {
-    width: '100%',
-    overflowY: 'hidden',
-    boxSizing: 'border-box',
-    display: 'flex'
-  },
-  subcontainer: {
-    paddingRight: props => props.scrollPadding,
-    overflowY: 'auto',
-    flex: '1',
-    scrollbarColor: props => props.scrollColor + ' transparent',
-    scrollbarWidth: 'thin',
-    '&::-webkit-scrollbar': {
-      width: props => props.scrollWidth,
-      background: 'transparent'
-    },
-    '&::-webkit-scrollbar-track': { background: 'transparent' },
-    '&::-webkit-scrollbar-thumb': {
-      background: props => props.scrollColor,
-      borderRadius: 5,
-      overflow: 'hidden',
-      '&:hover': { background: props => props.scrollColorHover }
-    }
-  }
-});
 
 ReactShadowScrollComponent.propTypes = {
   /** Scroll color */

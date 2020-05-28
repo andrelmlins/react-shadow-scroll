@@ -1,7 +1,16 @@
 import React from 'react';
 import ReactShadowScroll from '../lib';
 
-import { Container, Ul, Li, Card, Title, Subtitle, Row } from './styleds';
+import {
+  Container,
+  Ul,
+  Li,
+  Card,
+  Title,
+  Subtitle,
+  Row,
+  RowBadge
+} from './styleds';
 import Badge from './Badge';
 
 import cars from './cars';
@@ -9,7 +18,7 @@ import cars from './cars';
 const App = () => (
   <Container>
     <Title>React Shadow Scroll</Title>
-    <p>
+    <RowBadge>
       <Badge
         url="https://www.npmjs.com/package/react-shadow-scroll"
         image="https://badge.fury.io/js/react-shadow-scroll.svg"
@@ -31,16 +40,11 @@ const App = () => (
         text="Dependencies"
       />
       <Badge
-        url="https://app.netlify.com/sites/react-shadow-scroll/deploys"
-        image="https://api.netlify.com/api/v1/badges/6061e313-a774-4951-b9da-3c11bc5040e8/deploy-status"
-        text="Netlify Status"
-      />
-      <Badge
         url="https://lgtm.com/projects/g/andrelmlins/react-shadow-scroll/context:javascript"
         image="https://img.shields.io/lgtm/grade/javascript/g/andrelmlins/react-shadow-scroll.svg?logo=lgtm&logoWidth=18"
         text="Language grade: JavaScript"
       />
-    </p>
+    </RowBadge>
     <Row>
       <Card>
         <Subtitle>With ReactShadowScroll</Subtitle>
