@@ -21,14 +21,6 @@ const ReactShadowScrollComponent = ({
   scrollColorHover,
   ...props
 }) => {
-  const classes = useStyles({
-    scrollPadding,
-    scrollColor,
-    scrollWidth,
-    isShadow,
-    scrollColorHover,
-    shadow
-  });
   const ref = useRef();
   const [scroll, setScroll] = useState(false);
 
