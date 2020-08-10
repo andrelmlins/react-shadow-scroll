@@ -19,7 +19,7 @@ Local demo:
 ```
 git clone https://github.com/andrelmlins/react-shadow-scroll.git
 cd react-shadow-scroll
-yarn install && yarn start
+npm install && npm run start
 ```
 
 ## Examples
