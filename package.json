@@ -1,6 +1,6 @@
 {
   "name": "react-shadow-scroll",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "Component that customizes the list and inserts shadow when scrolling exists",
   "main": "dist/index.js",
   "module": "dist/index.js",
