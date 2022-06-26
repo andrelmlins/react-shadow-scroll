@@ -7,6 +7,7 @@ export interface ReactShadowScrollComponentProps {
   isShadow?: boolean;
   shadow?: string;
   styleSubcontainer?: object;
+  children?: React.ReactNode;
 }
 
 export default class ReactShadowScrollComponent extends React.Component<
